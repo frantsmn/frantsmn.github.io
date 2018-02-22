@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+.container {}
+
+header {
+  display: none;
+  position: fixed;
+  height: 20px;
+  width: 100%;
+  background-color: silver;
+}
+
+.screen {
+  height: 100vh;
+}
+
+#welcome {
+  background-color: white;
+}
+
+#works {
+  background-color: red;
+}
+
+#progress {
+  background-color: green;
+}
+
+#contact {
+  background-color: yellow;
+}
