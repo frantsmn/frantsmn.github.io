@@ -1,23 +1,73 @@
 body {
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
-.container {}
+p {
+  font-weight: normal;
+}
 
-header {
-  display: none;
-  position: fixed;
-  height: 20px;
-  width: 100%;
-  background-color: silver;
+.container {
+  display: grid;
 }
 
 .screen {
   height: 100vh;
+  display: grid;
 }
 
-#welcome {
-  background-color: white;
+.screen .center {
+  text-align: center;
+  align-self: center;
+  padding: 40px;
+}
+
+#welcome.screen {
+  background-image: url(img/welcome.jpg);
+  /* background: black; */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+@-webkit-keyframes MOVE-BG {
+  0% {
+    transform: translate(0%, 20%) rotateY(20deg) rotateZ(10deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(25%, 10%) rotateY(-10deg) rotateZ(-10deg);
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(50%, 20%) rotateY(-20deg) rotateZ(-20deg);
+    opacity: 0;
+  }
+}
+
+#welcome .center {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+#welcome .clouds {
+  opacity: 1;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: 100%;
+  /* border: 1px solid; */
+  background: url(img/clouds.png);
+  background-size: contain;
+  animation-name: MOVE-BG;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 #works {
