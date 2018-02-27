@@ -83,42 +83,42 @@ p {
 
 @-webkit-keyframes clouds1 {
   0% {
-    transform: translate(-10%, 20%) rotateY(20deg) rotateZ(10deg);
+    transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
     opacity: 0;
   }
   10% {
     opacity: 0.4;
   }
   50% {
-    transform: translate(20%, 10%) rotateY(-10deg) rotateZ(0deg);
+    transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
     opacity: 0.8;
   }
   90% {
     opacity: 0.4;
   }
   100% {
-    transform: translate(50%, 20%) rotateY(-20deg) rotateZ(-10deg);
+    transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
     opacity: 0;
   }
 }
 
 @-webkit-keyframes clouds2 {
   0% {
-    transform: translate(-30%, 20%) rotateY(20deg) rotateZ(10deg);
+    transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
     opacity: 0;
   }
   5% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   50% {
-    transform: translate(0%, 10%) rotateY(-10deg) rotateZ(0deg);
+    transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
     opacity: 0.8;
   }
   80% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   100% {
-    transform: translate(30%, 20%) rotateY(-20deg) rotateZ(-10deg);
+    transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
     opacity: 0;
   }
 }
