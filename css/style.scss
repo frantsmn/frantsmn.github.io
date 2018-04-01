@@ -1,97 +1,173 @@
-$font: 1vmax 'Raleway', sans-serif;
+$font: 100% 'Raleway', sans-serif;
+$light50: #A6B0C2;
+$light100: #D6DBE3;
+$original: #7888A1;
+$dark50: #546888;
+$dark100: #354C70;
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
   font: $font;
 }
 
 p {
   font-weight: normal;
+  color: black;
 }
 
+.white-button {
+  background: white;
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: $original;
+  box-shadow: 0 0 10px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s;
+}
+
+.white-button:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.20);
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+header ul {
+  text-align: center;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 10px 30px;
+  text-decoration: none;
+}
+
+header ul li a {
+  color: $light50;
+  text-decoration: none;
+}
+/* For paralax effect */
 .container {
-  display: grid;
+  perspective: 2px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* For paralax effect */
+.background {
+  transform: translateZ(-1px) scale(1.5);
+}
+
+.background {
+  z-index: -10;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("/img/welcome.jpg"), url("/img/welcome-glitchy1.jpg"), url("/img/welcome-glitchy2.jpg"), url("/img/welcome-glitchy3.jpg"), url("/img/welcome-glitchy4.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+@media (min-width: 1360px) {
+  .background {
+    background-image: url("/img/welcome1360.jpg");
+    animation: glitchy-background 2.5s 4s, after-glitchy-background 0.4s 12s;
+  }
+
+  .background .clouds {
+    opacity: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: url("/img/clouds.png") 0 50% no-repeat;
+    background-size: contain;
+    animation-duration: 70s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .background .clouds1 {
+    animation-name: clouds1;
+    animation-delay: -35s;
+  }
+
+  .background .clouds2 {
+    animation-name: clouds2;
+  }
 }
 
 .screen {
   height: 100vh;
-  display: grid;
-}
-
-.screen .content {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  text-align: center;
-  align-self: top;
-  padding: 10%;
-}
-
-.screen .background {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #welcome .content {
-  opacity: 0;
-  animation-name: welcome-content;
-  animation-duration: 3.5s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
+  text-align: center;
 }
 
-#welcome .background {
-  position: relative;
-  background-image: url("/img/welcome.jpg");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  animation: glitchy-background 2.5s 4s, after-glitchy-background 0.4s 12s;
+#welcome img.my-photo {
+  display: inline-block;
+  border-radius: 50%;
+  width: 200px;
+  vertical-align: middle;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 -45px;
 }
 
-#welcome .background .clouds {
-  opacity: 0;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background: url("/img/clouds.png") 0 50% no-repeat;
-  background-size: contain;
-  animation-duration: 70s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+#welcome div.info-right {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-#welcome .background .clouds1 {
-  animation-name: clouds1;
-  animation-delay: -35s;
+#welcome h1 {
+  font-weight: lighter;
+  font-size: 200%;
 }
 
-#welcome .background .clouds2 {
-  animation-name: clouds2;
+#welcome h1 span.hello {
+  font-size: 230%;
+  font-weight: 900;
+  color: $dark50;
 }
 
-#works {
-  background-color: white;
+#welcome h1 span.name {
+  font-weight: 900;
+  font-size: 110%;
 }
 
-#progress {
-  background-color: green;
+#welcome h1 span.web-developer {
+  font-size: 85%;
+  float: right;
+}
+
+#welcome .button-wrap {
+  text-align: center;
+}
+
+#about {
+  background-color: #b1b3bb;
+}
+
+#portfolio {
+  background-color: lightgrey;
 }
 
 #contact {
-  background-color: yellow;
-}
-/* Animations */
-@keyframes welcome-content {
-  from {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-
-  to {
-    opacity: 0.8;
-    transform: scale(1);
-  }
+  background-color: #b1b3bb;
 }
 @-webkit-keyframes clouds1 {
   0% {
