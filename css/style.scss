@@ -64,7 +64,7 @@ header ul li a {
   overflow-x: hidden;
 }
 /* For paralax effect */
-.background {
+.background *{
   transform: translateZ(-1px) scale(1.5);
 }
 
@@ -99,6 +99,7 @@ header ul li a {
   }
 
   .background .clouds1 {
+
     animation-name: clouds1;
     animation-delay: -35s;
   }
