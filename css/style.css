@@ -1,17 +1,10 @@
-$font: 100% 'Raleway', sans-serif;
-$light50: #A6B0C2;
-$light100: #D6DBE3;
-$original: #7888A1;
-$dark50: #546888;
-$dark100: #354C70;
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font: $font;
+  font: 100% "Raleway", sans-serif;
 }
 
 p {
@@ -25,13 +18,18 @@ p {
   padding: 20px;
   margin: 10px;
   text-decoration: none;
-  color: $original;
-  box-shadow: 0 0 10px rgba(0,0,0,0.10);
+  color: #7888A1;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .white-button:hover {
-  box-shadow: 0 0 10px rgba(0,0,0,0.20);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -53,13 +51,14 @@ header ul li {
 }
 
 header ul li a {
-  color: $dark50;
+  color: #546888;
   text-decoration: none;
 }
 
 /* For paralax effect */
 .container {
-  perspective: 2px;
+  -webkit-perspective: 2px;
+          perspective: 2px;
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -68,7 +67,8 @@ header ul li a {
 
 /* For paralax effect */
 .background {
-  transform: translateZ(-1px) scale(1.5);
+  -webkit-transform: translateZ(-1px) scale(1.5);
+          transform: translateZ(-1px) scale(1.5);
 }
 
 .background {
@@ -81,18 +81,22 @@ header ul li a {
   background-image: url("/img/welcome1360.jpg");
   background-size: cover;
   background-position: center;
+  -webkit-transition: opacity .2s linear;
   transition: opacity .2s linear;
   overflow: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 
 @media (min-width: 1360px) {
   .background {
     background-image: url("/img/welcome.jpg");
-    animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
+    -webkit-animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
+            animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
   }
-
   .background .clouds {
     opacity: 0;
     position: absolute;
@@ -100,18 +104,22 @@ header ul li a {
     width: 100vw;
     background: url("/img/clouds.png") 0 50% no-repeat;
     background-size: contain;
-    animation-duration: 100s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 100s;
+            animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
-
   .background .clouds1 {
-    animation-name: clouds1;
-    animation-delay: -35s;
+    -webkit-animation-name: clouds1;
+            animation-name: clouds1;
+    -webkit-animation-delay: -35s;
+            animation-delay: -35s;
   }
-
   .background .clouds2 {
-    animation-name: clouds2;
+    -webkit-animation-name: clouds2;
+            animation-name: clouds2;
   }
 }
 
@@ -122,21 +130,28 @@ header ul li a {
 }
 
 /* EDGE */
-@supports (-ms-ime-align:auto) {
+@supports (-ms-ime-align: auto) {
   .container {
-    perspective: 0px;
+    -webkit-perspective: 0px;
+            perspective: 0px;
   }
-
   .background {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 .screen {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #welcome .content {
@@ -148,7 +163,8 @@ header ul li a {
   border-radius: 50%;
   width: 200px;
   vertical-align: middle;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 -45px;
 }
 
@@ -165,7 +181,7 @@ header ul li a {
 #welcome h1 span.hello {
   font-size: 230%;
   font-weight: 900;
-  color: $dark50;
+  color: #546888;
 }
 
 #welcome h1 span.name {
@@ -193,3 +209,4 @@ header ul li a {
 #contact {
   background-color: #b1b3bb;
 }
+/*# sourceMappingURL=style.css.map */
