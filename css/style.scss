@@ -43,13 +43,17 @@ header {
 }
 
 header ul {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 header ul li {
-  display: inline-block;
-  margin: 10px 30px;
-  text-decoration: none;
+  text-align: center;
+  list-style-type: none;
+  margin: 10px 0;
+  box-sizing: border-box;
+  width: 25%;
 }
 
 header ul li a {
@@ -115,23 +119,6 @@ header ul li a {
   }
 }
 
-@media (max-width: 800px) {
-  .background {
-    opacity: 0.6;
-  }
-}
-
-/* EDGE */
-@supports (-ms-ime-align:auto) {
-  .container {
-    perspective: 0px;
-  }
-
-  .background {
-    transform: none;
-  }
-}
-
 .screen {
   height: 100vh;
   display: flex;
@@ -150,6 +137,10 @@ header ul li a {
   vertical-align: middle;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 0 -45px;
+}
+
+#welcome .info{
+  padding: 0 20px 0 70px;
 }
 
 #welcome div.info-right {
@@ -192,4 +183,39 @@ header ul li a {
 
 #contact {
   background-color: #b1b3bb;
+}
+
+// Adaptive
+
+
+@media (max-width: 800px) {
+  .background {
+    opacity: 0.6;
+  }
+
+  #welcome img.my-photo {
+    margin: 0;
+  }
+  
+  #welcome .info{
+    padding: 0 20px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  header ul li {
+    width: 50%;
+  }
+}
+
+/* EDGE */
+@supports (-ms-ime-align:auto) {
+  .container {
+    perspective: 0px;
+  }
+
+  .background {
+    transform: none;
+  }
 }
