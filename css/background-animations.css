@@ -1,216 +1,125 @@
-@-webkit-keyframes clouds1 {
-  0% {
-    -webkit-transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
-            transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
-            transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
-            transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
-    opacity: 0;
-  }
-}
-
 @keyframes clouds1 {
-  0% {
-    -webkit-transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
-            transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
-    opacity: 0;
+    0% {
+      transform: translate(-10%, 20%) rotateY(25deg) rotateZ(10deg);
+      opacity: 0;
+    }
+  
+    10% {
+      opacity: 0.4;
+    }
+  
+    50% {
+      transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
+      opacity: 0.8;
+    }
+  
+    90% {
+      opacity: 0.4;
+    }
+  
+    100% {
+      transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
+      opacity: 0;
+    }
   }
-  10% {
-    opacity: 0.4;
+  @keyframes clouds2 {
+    0% {
+      transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 0.4;
+    }
+  
+    50% {
+      transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
+      opacity: 0.8;
+    }
+  
+    80% {
+      opacity: 0.4;
+    }
+  
+    100% {
+      transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
+      opacity: 0;
+    }
   }
-  50% {
-    -webkit-transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
-            transform: translate(20%, 10%) rotateY(0deg) rotateZ(0deg);
-    opacity: 0.8;
+  
+  @keyframes glitchy-background {
+    0% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
+  
+    5% {
+      background-image: url("/img/welcome-glitchy2.jpg");
+    }
+  
+    15% {
+      background-image: url("/img/welcome-glitchy3.jpg");
+    }
+  
+    20% {
+      background-image: url("/img/welcome-glitchy2.jpg");
+    }
+  
+    35% {
+      background-image: url("/img/welcome.jpg");
+    }
+  
+    40% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
+  
+    45% {
+      background-image: url("/img/welcome-glitchy4.jpg");
+    }
+  
+    55% {
+      background-image: url("/img/welcome-glitchy3.jpg");
+    }
+  
+    60% {
+      background-image: url("/img/welcome-glitchy4.jpg");
+    }
+  
+    75% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
+  
+    80% {
+      background-image: url("/img/welcome-glitchy2.jpg");
+    }
+  
+    95% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
+  
   }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
-            transform: translate(50%, 20%) rotateY(-25deg) rotateZ(-10deg);
-    opacity: 0;
-  }
-}
+  @keyframes after-glitchy-background {
+    0% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
+  
+    20% {
+      background-image: url("/img/welcome-glitchy2.jpg");
+    }
+  
+    50% {
+      background-image: url("/img/welcome.jpg");
+    }
+  
+    80% {
+      background-image: url("/img/welcome-glitchy3.jpg");
+    }
+  
+    85% {
+      background-image: url("/img/welcome-glitchy4.jpg");
+    }
+  
+    100% {
+      background-image: url("/img/welcome-glitchy1.jpg");
+    }
 
-@-webkit-keyframes clouds2 {
-  0% {
-    -webkit-transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
-            transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
-    opacity: 0;
   }
-  5% {
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
-            transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
-            transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
-    opacity: 0;
-  }
-}
-
-@keyframes clouds2 {
-  0% {
-    -webkit-transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
-            transform: translate(-30%, 20%) rotateY(25deg) rotateZ(10deg);
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
-            transform: translate(0%, 10%) rotateY(0deg) rotateZ(0deg);
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
-            transform: translate(30%, 20%) rotateY(-25deg) rotateZ(-10deg);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes glitchy-background {
-  0% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  5% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  15% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  20% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  35% {
-    background-image: url("/img/welcome.jpg");
-  }
-  40% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  45% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  55% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  60% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  75% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  80% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  95% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-}
-
-@keyframes glitchy-background {
-  0% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  5% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  15% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  20% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  35% {
-    background-image: url("/img/welcome.jpg");
-  }
-  40% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  45% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  55% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  60% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  75% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  80% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  95% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-}
-
-@-webkit-keyframes after-glitchy-background {
-  0% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  20% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  50% {
-    background-image: url("/img/welcome.jpg");
-  }
-  80% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  85% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  100% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-}
-
-@keyframes after-glitchy-background {
-  0% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-  20% {
-    background-image: url("/img/welcome-glitchy2.jpg");
-  }
-  50% {
-    background-image: url("/img/welcome.jpg");
-  }
-  80% {
-    background-image: url("/img/welcome-glitchy3.jpg");
-  }
-  85% {
-    background-image: url("/img/welcome-glitchy4.jpg");
-  }
-  100% {
-    background-image: url("/img/welcome-glitchy1.jpg");
-  }
-}
-/*# sourceMappingURL=background-animations.css.map */

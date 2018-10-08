@@ -1,10 +1,18 @@
+/* VARIABLES & NORMALIZE start */
+
+:root {
+  --main-color: #ff6f69;
+  --light50: #A6B0C2;
+  --light100: #D6DBE3;
+  --original: #7888A1;
+  --dark50: #546888;
+  --dark100: #354C70;
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font: 100% "Raleway", sans-serif;
+  font: 100% 'Raleway', sans-serif;
 }
 
 p {
@@ -12,25 +20,29 @@ p {
   color: black;
 }
 
+/* VARIABLES & NORMALIZE end */
+
+/* WHITE BUTTON start */
+
 .white-button {
   background: white;
   display: inline-block;
   padding: 20px;
   margin: 10px;
   text-decoration: none;
-  color: #7888A1;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
+  color: var(--original);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
   transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  user-select: none;
 }
 
 .white-button:hover {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
 }
+
+/* WHITE BUTTON end */
+
+/* HEADER start */
 
 header {
   z-index: 1;
@@ -41,47 +53,65 @@ header {
 }
 
 header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 header ul li {
   text-align: center;
   list-style-type: none;
   margin: 10px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 25%;
 }
 
 header ul li a {
-  color: #546888;
+  color: var(--dark50);
   text-decoration: none;
 }
 
-/* For paralax effect */
+@media (max-width: 800px) {
+  header ul {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  header ul li {
+    width: 50%;
+  }
+}
+
+/* HEADER end */
+
 .container {
-  -webkit-perspective: 2px;
-          perspective: 2px;
+  /* paralax start*/
+  perspective: 2px;
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  /* paralax end*/
   scroll-behavior: smooth;
 }
 
-/* For paralax effect */
-.background {
-  -webkit-transform: translateZ(-1px) scale(1.5);
-          transform: translateZ(-1px) scale(1.5);
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.background {
+/* WELCOME BACKGROUND start */
+
+.welcome-background {
+  transform: translateZ(-1px) scale(1.5);
+}
+
+.welcome-background {
   z-index: -1;
   height: 100vh;
   width: 100vw;
@@ -91,60 +121,57 @@ header ul li a {
   background-image: url("/img/welcome1360.jpg");
   background-size: cover;
   background-position: center;
-  -webkit-transition: opacity .2s linear;
   transition: opacity .2s linear;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 
 @media (min-width: 1360px) {
-  .background {
+  .welcome-background {
     background-image: url("/img/welcome.jpg");
-    -webkit-animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
-            animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
+    animation: glitchy-background .8s 2s, after-glitchy-background 0.5s 5.5s;
   }
-  .background .clouds {
+  .welcome-background .clouds {
     opacity: 0;
     position: absolute;
     height: 100vh;
     width: 100vw;
     background: url("/img/clouds.png") 0 50% no-repeat;
     background-size: contain;
-    -webkit-animation-duration: 100s;
-            animation-duration: 100s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-duration: 90s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
-  .background .clouds1 {
-    -webkit-animation-name: clouds1;
-            animation-name: clouds1;
-    -webkit-animation-delay: -35s;
-            animation-delay: -35s;
+  .welcome-background .clouds1 {
+    animation-name: clouds1;
+    animation-delay: -35s;
   }
-  .background .clouds2 {
-    -webkit-animation-name: clouds2;
-            animation-name: clouds2;
+  .welcome-background .clouds2 {
+    animation-name: clouds2;
   }
 }
 
-.screen {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 800px) {
+  .welcome-background {
+    opacity: 0.6;
+  }
 }
+
+/* EDGE HACK */
+
+@supports (-ms-ime-align:auto) {
+  .container {
+    perspective: 0px;
+  }
+  .welcome-background {
+    transform: none;
+  }
+}
+
+/* WELCOME BACKGROUND end */
+
+/* WELCOME start */
 
 #welcome .content {
   text-align: center;
@@ -155,8 +182,7 @@ header ul li a {
   border-radius: 50%;
   width: 200px;
   vertical-align: middle;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 -45px;
 }
 
@@ -177,7 +203,7 @@ header ul li a {
 #welcome h1 span.hello {
   font-size: 230%;
   font-weight: 900;
-  color: #546888;
+  color: var(--dark50);
 }
 
 #welcome h1 span.name {
@@ -199,7 +225,7 @@ header ul li a {
 }
 
 #portfolio {
-  background-color: lightgrey;
+  background-color: var(--dark100);
 }
 
 #contact {
@@ -207,9 +233,6 @@ header ul li a {
 }
 
 @media (max-width: 800px) {
-  .background {
-    opacity: 0.6;
-  }
   #welcome img.my-photo {
     margin: 0;
   }
@@ -218,21 +241,58 @@ header ul li a {
   }
 }
 
-@media (max-width: 400px) {
-  header ul li {
-    width: 50%;
-  }
+/* WELCOME end */
+
+/* PORTFOLIO start */
+
+#portfolio {
+  padding: 90px 50px 50px;
 }
 
-/* EDGE */
-@supports (-ms-ime-align: auto) {
-  .container {
-    -webkit-perspective: 0px;
-            perspective: 0px;
-  }
-  .background {
-    -webkit-transform: none;
-            transform: none;
-  }
+#portfolio .grid {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
 }
-/*# sourceMappingURL=style.css.map */
+
+#portfolio .grid .card {
+  display: block;
+  width: 250px;
+  margin: 10px;
+  height: max-content;
+  background: var(--light100);
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#portfolio .grid .card img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#portfolio .grid .card .description .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#portfolio .grid .card .description .text {
+  margin-bottom: 5px;
+}
+
+#portfolio .grid .card .description .more {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background: var(--dark50);
+  box-sizing: border-box;
+  color: var(--light100);
+  margin-top: 10px;
+}
+
+/* PORTFOLIO end */
