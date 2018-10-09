@@ -9,7 +9,7 @@
   --dark100: #354C70;
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
   font: 100% 'Raleway', sans-serif;
@@ -55,17 +55,17 @@ header {
 header ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly; 
   width: 50%;
   margin: 0 auto;
+  padding-inline-start: unset;
 }
 
 header ul li {
   text-align: center;
   list-style-type: none;
-  margin: 10px 0;
+  margin: 10px;
   box-sizing: border-box;
-  width: 25%;
 }
 
 header ul li a {
@@ -79,9 +79,11 @@ header ul li a {
     margin: 0;
   }
 }
+
 @media (max-width: 400px) {
   header ul li {
     width: 50%;
+    margin: 10px 0;
   }
 }
 
@@ -221,11 +223,13 @@ header ul li a {
 }
 
 #about {
-  background-color: #b1b3bb;
+  background-image: radial-gradient( circle farthest-corner at 10% 35%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #portfolio {
-  background-color: var(--dark100);
+  background-color: var(--dark50);
 }
 
 #contact {
@@ -246,7 +250,7 @@ header ul li a {
 /* PORTFOLIO start */
 
 #portfolio {
-  padding: 90px 50px 50px;
+  padding: 90px 10px 50px;
 }
 
 #portfolio .grid {
@@ -255,24 +259,53 @@ header ul li a {
   width: 100%;
   box-sizing: border-box;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: space-between;
+  padding-inline-start: unset;
 }
 
 #portfolio .grid .card {
   display: block;
-  width: 250px;
-  margin: 10px;
+  width: 300px;
+  margin: 30px;
   height: max-content;
-  background: var(--light100);
   overflow: hidden;
-  padding: 10px;
   box-sizing: border-box;
+  filter: drop-shadow(0px 4px 3px var(--dark100));
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) filter 0.2s;
+}
+
+#portfolio .grid .card:hover,
+#portfolio .grid .card:focus {
+  filter: drop-shadow(0px 3px 2px var(--dark100));
 }
 
 #portfolio .grid .card img {
   width: 100%;
-  margin-bottom: 5px;
+  height: 200px;
+  object-fit: cover;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) transform 0.2s;
+  transform: scale(1);
+  backface-visibility: hidden;
+}
+
+#portfolio .grid .card:hover img,
+#portfolio .grid .card:focus img {
+  transform: scale(1.05);
+}
+
+#portfolio .grid .card .description {
+  position: relative;
+  padding: 10px;
+  background: var(--light100);
+  width: 85%;
+  margin: -10px auto 0;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) transform 0.2s;
+}
+
+#portfolio .grid .card:hover .description,
+#portfolio .grid .card:focus .description {
+  transform: translateY(-3px);
 }
 
 #portfolio .grid .card .description .title {
