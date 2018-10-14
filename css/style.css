@@ -1,7 +1,6 @@
 /* VARIABLES & NORMALIZE start */
 
 :root {
-  --main-color: #ff6f69;
   --light50: #A6B0C2;
   --light100: #D6DBE3;
   --original: #7888A1;
@@ -55,7 +54,7 @@ header {
 header ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
   width: 50%;
   margin: 0 auto;
   padding-inline-start: unset;
@@ -162,7 +161,7 @@ header ul li a {
 
 /* EDGE HACK */
 
-@supports (-ms-ime-align:auto) {
+@supports (-ms-ime-align: auto) {
   .container {
     perspective: 0px;
   }
@@ -175,7 +174,8 @@ header ul li a {
 
 /* WELCOME start */
 
-#welcome .content {
+#welcome .welcome-info {
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -185,16 +185,13 @@ header ul li a {
   width: 200px;
   vertical-align: middle;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 -45px;
+  transform: translateX(22.5px);
 }
 
-#welcome .info {
-  padding: 0 20px 0 70px;
-}
-
-#welcome div.info-right {
+#welcome div.welcome-info-right {
   display: inline-block;
   vertical-align: middle;
+  transform: translateX(-22.5px);
 }
 
 #welcome h1 {
@@ -222,34 +219,106 @@ header ul li a {
   text-align: center;
 }
 
-#about {
-  background-image: radial-gradient( circle farthest-corner at 10% 35%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-#portfolio {
-  background-color: var(--dark50);
-}
-
-#contact {
-  background-color: #b1b3bb;
-}
-
 @media (max-width: 800px) {
   #welcome img.my-photo {
-    margin: 0;
+    transform: translateX(0);
   }
-  #welcome .info {
-    padding: 0 20px;
+  #welcome div.welcome-info-right {
+    transform: translateX(0);
   }
 }
 
 /* WELCOME end */
 
+/* ABOUT start */
+
+#about {
+  background-image: url("/img/about.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#about::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: radial-gradient( circle farthest-corner at 100% 0%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 70%;
+  width: 30%;
+  top: 0;
+  left: 0;
+  transform: skewX(-25deg) translatex(-70%);
+  filter: drop-shadow(20px -80px 0 #fff);
+}
+
+#about:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: radial-gradient( circle farthest-corner at 10% 35%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 70%;
+  width: 30%;
+  right: 0;
+  bottom: 0;
+  transform: skewX(-25deg) translateX(70%);
+  filter: drop-shadow(-20px 80px 0 var(--light50));
+}
+
+#about .about-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#about .about-info p {
+  display: block;
+  width: 100%;
+  line-height: 27px;
+  padding: 0 20px;
+}
+
+#about .about-info .diagram{
+  width: 120px;
+  height: 120px;
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: var(--dark50);
+}
+
+@media (max-width: 1000px) {
+  #about:before,  #about:after{
+    display: none;
+  }
+
+  #about .about-info{
+    width: 100%;
+  }
+}
+
+/* ABOUT end */
+
 /* PORTFOLIO start */
 
 #portfolio {
+  background-color: var(--light50);
   padding: 90px 10px 50px;
 }
 
@@ -275,8 +344,7 @@ header ul li a {
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) filter 0.2s;
 }
 
-#portfolio .grid .card:hover,
-#portfolio .grid .card:focus {
+#portfolio .grid .card:hover, #portfolio .grid .card:focus {
   filter: drop-shadow(0px 3px 2px var(--dark100));
 }
 
@@ -289,8 +357,7 @@ header ul li a {
   backface-visibility: hidden;
 }
 
-#portfolio .grid .card:hover img,
-#portfolio .grid .card:focus img {
+#portfolio .grid .card:hover img, #portfolio .grid .card:focus img {
   transform: scale(1.05);
 }
 
@@ -303,8 +370,7 @@ header ul li a {
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) transform 0.2s;
 }
 
-#portfolio .grid .card:hover .description,
-#portfolio .grid .card:focus .description {
+#portfolio .grid .card:hover .description, #portfolio .grid .card:focus .description {
   transform: translateY(-3px);
 }
 
@@ -329,3 +395,11 @@ header ul li a {
 }
 
 /* PORTFOLIO end */
+
+/* CONTACT start */
+
+#contact {
+  background-color: #b1b3bb;
+}
+
+/* CONTACT end */
