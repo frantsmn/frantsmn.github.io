@@ -3,18 +3,12 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="/img/welcome.jpg" as="image">
-  <link rel="preload" href="/img/clouds.png" as="image">
-  <link rel="preload" href="/img/welcome-glitchy1.jpg" as="image">
-  <link rel="preload" href="/img/welcome-glitchy2.jpg" as="image">
-  <link rel="preload" href="/img/welcome-glitchy3.jpg" as="image">
-  <link rel="preload" href="/img/welcome-glitchy4.jpg" as="image">
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="preload">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="preload">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet"> -->
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/background-animations.css">
+
   <title>Frants Mitskun</title>
 </head>
 
@@ -28,23 +22,21 @@
     </ul>
   </header>
 
-  <div class="container">
+  <main class="container">
 
-    <div class="welcome-background">
-      <div class="clouds clouds1"></div>
-      <div class="clouds clouds2"></div>
-    </div>
-
-    <div id="welcome" class="screen">
+    <div id="welcome" class="screen screen--welcome">
       <div class="welcome-info">
-        <img class="my-photo" src="/img/photo.jpg" alt="Frants Mitskun">
         <div class="welcome-info-right">
-          <h1><span class="hello">Hello</span><br> I am <span class="name">Frants Mitskun</span><br><span class="frontend-developer">
-              Frontend Developer</span></h1>
+          <h1>
+            <span class="neon neon--active"><span class="letter-h neon--borderless">H</span><span class="letter-e neon--borderless">e</span><span class="letter-l1 neon--borderless">l</span><span class="letter-l2 neon--borderless">l</span><span class="letter-o neon--borderless --disabled">o</span></span>
+
+            <!-- <br> I am <span class="name">Frants Mitskun</span><br><span class="frontend-developer">
+              Frontend Developer</span> -->
+          </h1>
         </div>
-        <div class="button-wrap">
+        <!-- <div class="button-wrap">
           <a class="white-button" href="#portfolio">MY WORKS</a>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -71,62 +63,14 @@
     </div>
 
     <div id="portfolio" class="screen">
-      <ul class="grid">
-
-        <li class="card">
-          <img src="/img/image.png" alt="card-image">
-          <div class="description">
-            <p class="title">Lorem ipsum dolor sit.</p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, accusantium?</p>
-            <a class="more" href="#" target="_blank">Read more</a>
-          </div>
-        </li>
-
-        <li class="card">
-          <img src="/img/image.png" alt="card-image">
-          <div class="description">
-            <p class="title">Lorem ipsum dolor sit.</p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, accusantium?</p>
-            <a class="more" href="#" target="_blank">Read more</a>
-          </div>
-        </li>
-
-        <li class="card">
-          <img src="/img/image.png" alt="card-image">
-          <div class="description">
-            <p class="title">Lorem ipsum dolor sit.</p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, accusantium?</p>
-            <a class="more" href="#" target="_blank">Read more</a>
-          </div>
-        </li>
-
-        <li class="card">
-          <img src="/img/image.png" alt="card-image">
-          <div class="description">
-            <p class="title">Title</p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, accusantium?</p>
-            <a class="more" href="#" target="_blank">Read more</a>
-          </div>
-        </li>
-
-        <li class="card">
-          <img src="/img/image.png" alt="card-image">
-          <div class="description">
-            <p class="title">Title</p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, accusantium?</p>
-            <a class="more" href="#" target="_blank">Read more</a>
-          </div>
-        </li>
-
-      </ul>
-
     </div>
 
 
     <div id="contact" class="screen">
-
     </div>
-  </div>
+
+  </main>
+
 </body>
 
 </html>
