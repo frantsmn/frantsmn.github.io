@@ -1,176 +1,155 @@
-:root {
-
-}
 
 
-h1{
+h1 {
     font-size: 45pt;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font: 100% 'Lato', sans-serif;
+
     background-color: #000;
+
+    font: 100% "Lato", sans-serif;
 }
 
-.container {
-    /* paralax start*/
-    perspective: 2px;
-    height: 100vh;
-    overflow-y: auto;
+.main {
     overflow-x: hidden;
-    /* paralax end*/
+    overflow-y: auto;
 
+    height: 100vh;
+
+/* paralax start*/
+
+    perspective: 2px;
+
+/* paralax end*/
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
 }
 
 .screen {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
     box-sizing: border-box;
+    min-height: 100vh;
+
+    scroll-snap-align: start;
 }
 
 /* BUTTON */
 
 .white-button {
-    border: white 1px solid;
     display: inline-block;
-    padding: 20px;
+
     margin: 10px;
+    padding: 20px;
+
+    transition: box-shadow .2s;
     text-decoration: none;
+
     color: var(--original);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
-    transition: box-shadow 0.2s;
+    border: white 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .10);
 }
 
 .white-button:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .20);
 }
 
 /* BUTTON */
 
-/* HEADER start */
-
-header {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-header ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 50%;
-    margin: 0 auto;
-    padding-inline-start: unset;
-}
-
-header ul li {
-    text-align: center;
-    list-style-type: none;
-    margin: 10px;
-    box-sizing: border-box;
-}
-
-header ul li a {
-    color: rgb(0, 140, 140);
-    text-decoration: none;
-}
-
-@media (max-width: 800px) {
-    header ul {
-        width: 100%;
-        margin: 0;
-    }
-}
-
-@media (max-width: 400px) {
-    header ul li {
-        width: 50%;
-        margin: 10px 0;
-    }
-}
-
-/* HEADER end */
-
 /* ABOUT start */
 
 #about {
-    background-image: url("/img/about.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
+
     overflow: hidden;
+
     padding: 20px;
+
+    background: #cdf2f5;
 }
 
 #about::before {
-    content: "";
-    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 30%;
+    height: 70%;
+
+    content: "";
+    transform: skewX(-25deg) translatex(-70%);
+
     background-image: radial-gradient( circle farthest-corner at 100% 0%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
     background-attachment: fixed;
     background-size: cover;
-    height: 70%;
-    width: 30%;
-    top: 0;
-    left: 0;
-    transform: skewX(-25deg) translatex(-70%);
+
     filter: drop-shadow(20px -80px 0 #fff);
 }
 
 #about:after {
-    content: "";
-    display: block;
     position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 30%;
+    height: 70%;
+
+    content: "";
+    transform: skewX(-25deg) translateX(70%);
+
     background-image: radial-gradient( circle farthest-corner at 10% 35%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
     background-attachment: fixed;
     background-size: cover;
-    height: 70%;
-    width: 30%;
-    right: 0;
-    bottom: 0;
-    transform: skewX(-25deg) translateX(70%);
+
     filter: drop-shadow(-20px 80px 0 var(--light50));
 }
 
 #about .about-info {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 70%;
 }
 
 #about .about-info p {
     display: block;
+
     width: 100%;
-    line-height: 27px;
     padding: 0 20px;
+
+    line-height: 27px;
 }
 
 #about .about-info .diagram {
-    width: 120px;
-    height: 120px;
-    margin: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+
     box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    margin: 25px;
     padding: 10px;
+
+    border-radius: 50%;
 }
 
 @media (max-width: 1000px) {
-    #about:before, #about:after {
+    #about:before,
+    #about:after {
         display: none;
     }
     #about .about-info {

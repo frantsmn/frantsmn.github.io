@@ -1,5 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('neon.css');
 @import url('main.css');
-@import url('welcome.css');
-@import url('neon-buttons.css');
+@import url('header.css');
+@import url('intro.css');
