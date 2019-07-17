@@ -1,0 +1,129 @@
+@keyframes turning_on_background {
+    0% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .04) 0%, rgba(0, 0, 0, 1) 50%);
+    }
+    15% {
+        background: radial-gradient(ellipse at center, rgba(122, 223, 211, .05) 0%, rgba(0, 0, 0, 1) 60%);
+    }
+    20% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .07) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    25% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .05) 0%, rgba(0, 0, 0, 1) 60%);
+    }
+    30% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .07) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    35% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .06) 0%, rgba(0, 0, 0, 1) 60%);
+    }
+    65% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .07) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    75% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .08) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    80% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .07) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    100% {
+        background: radial-gradient(ellipse at center, rgba(0, 255, 225, .08) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+}
+
+@keyframes hue_rotate {
+    0% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    1% {
+        filter: hue-rotate(160deg) brightness(1.2);
+    }
+    2% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    //pause
+    5% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    6% {
+        filter: hue-rotate(160deg) saturate(1.2);
+    }
+    7% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    //pause
+    30% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    32% {
+        filter: hue-rotate(160deg) saturate(1);
+    }
+    33% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    //pause
+    35% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    36% {
+        filter: hue-rotate(120deg) saturate(1.4);
+    }
+    42% {
+        filter: hue-rotate(160deg) saturate(1);
+    }
+    43% {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    44% {
+        filter: hue-rotate(120deg) saturate(1.2);
+    }
+    47% {
+        filter: hue-rotate(160deg) saturate(1);
+    }
+    48% {
+        filter: hue-rotate(140deg) saturate(1.2);
+    }
+    //pause
+    65% {
+        filter: hue-rotate(140deg) saturate(1);
+    }
+    100% {
+        filter: hue-rotate(160deg) saturate(1.7);
+    }
+}
+
+.screen--intro {
+    animation: turning_on_background 1.7s linear;
+
+    background: radial-gradient(ellipse at center, rgba(0, 255, 225, .08) 0%, rgba(0, 0, 0, 1) 70%);
+}
+
+.letter-h {
+    animation: turning_on_letters .8s .35s;
+}
+
+.letter-e {
+    animation: turning_on_letters .9s .65s;
+}
+
+.letter-l1 {
+    animation: turning_on_letters .7s .75s;
+}
+
+.letter-l2 {
+    animation: turning_on_letters 1s .85s;
+}
+
+.letter-o {
+    display: inline-block;
+
+    animation: turning_on_letters 1.3s 1s, burnout 2.2s linear 2.3s;
+
+    animation-fill-mode: forwards;
+}
+
+.screen--intro {
+    animation: hue_rotate 3s linear 6s;
+
+    animation-fill-mode: forwards;
+}

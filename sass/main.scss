@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #000;
+
+    font: 100% "Lato", sans-serif;
+}
+
+h1 {
+    font-size: 45pt;
+}
+
+p{
+    line-height: 1.7em;
+}
+
+.main {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    height: 100vh;
+
+/* paralax start*/
+
+    perspective: 2px;
+
+/* paralax end*/
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    min-height: 100vh;
+
+    scroll-snap-align: start;
+}
+
+.button {
+    display: inline-block;
+
+    margin: 10px;
+    padding: 20px;
+
+    transition: box-shadow .2s;
+    text-decoration: none;
+
+    color: var(--original);
+    border: white 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+}
+
+.text-block{
+    max-width: 800px;
+}

@@ -7,43 +7,51 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="preload">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet"> -->
 
+  <link rel="preload" href="css/style.css">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Frants Mitskun — Portfolio webpage</title>
 </head>
 
 <body>
-  <header>
-    <ul>
-      <li><a href="#intro">Intro</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">My works</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <header class="header">
+    <ul class="header__list">
+      <li class="header__item">
+        <a class="header__link" href="#intro">Intro</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#about">About</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#portfolio">My works</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#contact">Contact</a>
+      </li>
     </ul>
-  </header>
+  </header class="header">
 
   <main class="main">
 
-    <div id="intro" class="screen screen--intro">
-      <div class="welcome-info">
-        <div class="welcome-info-right">
-          <h1>
-            <span class="neon neon--active"><span class="letter-h neon--borderless">H</span><span class="letter-e neon--borderless">e</span><span class="letter-l1 neon--borderless">l</span><span class="letter-l2 neon--borderless">l</span><span class="letter-o neon--borderless">o</span></span>
+    <section id="intro" class="screen screen--intro">
+      <h1>
+        <span class="neon neon--on">
+          <span class="letter-h">H</span><span class="letter-e">e</span><span class="letter-l1">l</span><span
+            class="letter-l2">l</span><span class="letter-o neon--disabled">o</span></span>
+      </h1>
 
-            <!-- <br> I am <span class="name">Frants Mitskun</span><br><span class="frontend-developer">
-              Frontend Developer</span> -->
-          </h1>
-        </div>
-        <!-- <div class="button-wrap">
-          <a class="white-button" href="#portfolio">MY WORKS</a>
-        </div> -->
-      </div>
+      <!--
 
-    </div>
+        I am Frants Mitskun Frontend Developer
+        <a class="button" href="#portfolio">MY WORKS</a>
 
-    <div id="about" class="screen">
+      -->
 
-      <div class="about-info">
+    </section>
+
+    <section id="about" class="screen screen--about">
+
+      <div class="text-block">
         <p> Hello, I'm Frants. I graduated from Minsk Innovation University with a bachelor deegree in Information
           Systems
           and Technologies (in economics). So, my qualification is a programming engineer, economist. Also,
@@ -54,19 +62,15 @@
           free time like to play table tennis, poker and sometimes some PC games, also love music, both to listen and
           create (can play guitar a little).
         </p>
-        <div class="diagram">English</div>
-        <div class="diagram">HTML</div>
-        <div class="diagram">CSS</div>
-        <div class="diagram">JS</div>
       </div>
 
-    </div>
+    </section>
 
-    <div id="portfolio" class="screen">
-    </div>
+    <section id="portfolio" class="screen screen--portfolio">
+    </section>
 
-    <div id="contact" class="screen">
-    </div>
+    <section id="contact" class="screen screen--contact">
+    </section>
 
   </main>
 

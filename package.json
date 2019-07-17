@@ -1,0 +1,25 @@
+{
+  "name": "frantsmn.github.io",
+  "version": "1.0.0",
+  "description": "Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx node-sass --output-style compressed sass/style.scss css/style.css",
+    "sass:w": "npx node-sass -wr sass -o css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frantsmn/frantsmn.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frantsmn/frantsmn.github.io/issues"
+  },
+  "homepage": "https://github.com/frantsmn/frantsmn.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
