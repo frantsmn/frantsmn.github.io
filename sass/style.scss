@@ -1,11 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap'); */
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-@import 'neon';
-@import 'spark';
-@import 'main';
-@import 'header';
-@import 'intro';
-@import 'about';
-@import 'portfolio';
-@import 'contact';
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+@import "animations/neon";
+@import "animations/spark";
+
+@import "main";
+@import "intro";
+@import "header";
+@import "portfolio";
+@import "contact";
