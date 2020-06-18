@@ -1,0 +1,22 @@
+{
+  "name": "Biggid service",
+  "short_name": "Biggid",
+  "description": "Каталог предложений для развлечения с семьей, ребенком, девушкой в вашем городе",
+  "lang": "ru-RU",
+  "display": "standalone",
+  "start_url": "/?utm_source=PWA",
+  "background_color": "#4E35A4",
+    "theme_color": "#4E35A4",
+  "icons": [
+    {
+      "src": "img/app-icons/logo-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/app-icons/logo-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+	{
+		"id": 100,
+		"title": "Red Bull",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=100",
+		"badges": [
+			{
+				"color": "gold",
+				"text": "Скидка 50%"
+			},
+			{
+				"color": "purple",
+				"text": "Благотворительность"
+			},
+			{
+				"color": "",
+				"text": "Обычный"
+			}
+		],
+		"rating": {
+			"value": "83",
+			"text": "3 отзыва"
+		}
+	},
+	{
+		"id": 101,
+		"title": "KFC",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=101",
+		"badges": [
+			{
+				"color": "gold",
+				"text": "Скидка 30%"
+			},
+			{
+				"color": "green",
+				"text": "Новинка"
+			},
+			{
+				"color": "purple",
+				"text": "Благотворительность"
+			},
+			{
+				"color": "",
+				"text": "Обычный"
+			}
+		],
+		"rating": {
+			"value": "76",
+			"text": "15 отзывов"
+		}
+	},
+	{
+		"id": 102,
+		"title": "Reebok",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=102",
+		"badges": [
+			{
+				"color": "red",
+				"text": "Акция"
+			},
+			{
+				"color": "green",
+				"text": "Новинка"
+			}
+		]
+	},
+	{
+		"id": 103,
+		"title": "Adidas",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=103",
+		"rating": {
+			"value": "100",
+			"text": "1 отзыв"
+		}
+	},
+	{
+		"id": 104,
+		"title": "Macdonalds",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=104",
+		"rating": {
+			"value": "50",
+			"text": "4 отзыва"
+		}
+	},
+	{
+		"id": 105,
+		"title": "Буслик",
+		"url": "/item-coupon.html",
+		"img": "https://picsum.photos/620/400?random=105",
+		"badges": [
+			{
+				"color": "gold",
+				"text": "Скидка 20%"
+			},
+			{
+				"color": "green",
+				"text": "Новинка"
+			},
+			{
+				"color": "purple",
+				"text": "Благотворительность"
+			}
+		],
+		"rating": {
+			"value": "68",
+			"text": "11 отзывов"
+		}
+	}
+]

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>No internet connection</title>
+    <meta name="description" content="Страница-заглушка для случая, когда нет соединения с интернетом или сервером">
+
+</head>
+
+<body style="background-color: #cac2e4; margin:0;">
+
+    <main style="display: flex; align-items: center; justify-content: center; height: 100vh; flex-flow: column;">
+
+        <p style="text-align: center">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAB6VBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMIC33AAAAonRSTlMA7vgC/f704uMK9UkDtMMWBUsBIvm33k3MnXcz8omudhEkGUjkhsLKFWu4JTgGOzD7XEXqH4CEhbK2E45g8RoI+isMHr7cPAc2EqEo5hDH5drv4KDTLKkhD+ezNKo6VdkEijJW4aMXIIxhemVanOkqZ5VXmNurRiMtDfZDpaSPHE/rX0QOVG9epplB8NEx38hZycHU6LltR7o+kC7PrfM3C5GUaQcNAAACE0lEQVRIx+1V5V8bQRDdXHK5JJCEuEspUty1QCjFXesuUHeDunsLNery/tLuNUnZkx93fOyvzJd782be7e7czB4h6/ZvWW7VhZJzgSqjbsHeo+34Y2dO9+sSeHbR5EuXz19sHgf4Pdu1FYEoDI1zaXy20AxDrZbingnbnCtufhzVNasrajtxQkK4G8BVqudaXz4bMpLkMBrlkc3YuUNFsOHGAj3zcEMIbxSFzS1CoVJxxwzTi+5JquK3KKO7edsmOVfJ4eZt+ux9i261TdtxUr7yNG6l0cDrh2qS47DLmOvwV2RgV56apAN3ZUwTmlavvJvj+1jf+LgHbRrfV8BWtrxBgAtkPVeBJUcFG9D8qD7LRwx41fbg7wssgKDEKbGrq58OpFvoHeJdzJrqkrxIb82TTvQMiU4c7yU1yrEIG9WweIIlTNJ+/YL2Dt2Dl3Lgm9hxn9cw3fnf0U++4tNaboQYftHiJRV8Wdjnt9n8vkSZIvQD04RDn4yN+HhkzNRySBYcwYTsq9JqHjPBHNrnsVo9h0N0IA4ekIR/wkw+YpGlnA54YyNZLxnzokgyKDMYJx/QwlLFOFLO+uUCilk/gSnS+hz3GcoRdEo3Pxt0sNfDGFyEhFF3VXeNBzHqpgNpR90VfQLrIKIzIpi3A6Wn6iu08q+FxxBdzkxYYgL6bHTl8mktKRW8Gum2/VMu9/o/9H+33wfxrlZW3q+aAAAAAElFTkSuQmCC">
+        </p>
+
+        <p style="text-align: center; font-family: 'Courier New', Courier, monospace">
+            No internet connection<br>Reconnect at <span class="counter">5</span> sec...
+        </p>
+
+        <hr>
+
+        <p style="text-align: center; font-family: 'Courier New', Courier, monospace">
+            Нет интернет-соединения<br>Попытка переподключения через <span class="counter">5</span> сек...
+        </p>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",
+            function () {
+                var counter = 5;
+                var counterElements = document.querySelectorAll('.counter');
+
+                var interval = setInterval(() => {
+                    conter = --counter < 0 ? 0 : counter;
+                    console.log('Reconnect at ' + counter + ' sec...');
+                    counterElements.forEach(el => {
+                        el.textContent = counter;
+                    });
+                }, 1000);
+
+                var timeout = setTimeout(() => {
+                    window.clearInterval(interval);
+                    window.location.reload(false);
+                    window.clearTimeout(timeout);
+                }, 5000);
+            }
+        );
+    </script>
+
+</body>
+
+</html>

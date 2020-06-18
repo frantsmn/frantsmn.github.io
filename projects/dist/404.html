@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru-RU">
+
+<head>
+
+    <title>404 — Page not found</title>
+    <meta name="description" content="404 error page">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Подкрашивание адресной строки у мобильного браузера  -->
+    <meta name="theme-color" content="#381B4E">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/app-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/app-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/app-icons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+
+    <!---------------- CSS ---------------->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/common.blocks.min.css">
+
+</head>
+
+
+
+<body class="body body--grid">
+
+    <!-- .header -->
+
+<header class="header header--center">
+
+  <div class="header-top">
+
+    <div class="header-top__wrapper header-top__wrapper--mobile">
+
+      <div class="header-top__button-wrap">
+        <button class="header-top__button header-top__button--back" title="Назад">
+        </button>
+      </div>
+
+      <div class="header-top__window-title-wrapper">
+        <span class="header-top__window-title">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi labore iusto?
+        </span>
+      </div>
+
+      <div class="header-top__button-wrap">
+        <button class="header-top__button header-top__button--share" data-overlayid="share_page" title="Поделиться">
+        </button>
+      </div>
+
+    </div>
+
+    <div class="header-top__wrapper header-top__wrapper--desktop">
+
+      <div class="header-top__settings">
+
+        <label class="label ">
+    <span>Валюта:</span>
+    <select class="select select--small select--borderless" name="currency" id="currency">
+        <option value="BYN">BYN</option>
+        <option value="RUB">RUB</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+</label>
+        <label class="label ">
+    <span>Язык:</span>
+    <select class="select select--small select--borderless" name="language" id="language">
+        <option value="ru-RU">RU</option>
+        <option value="be-BY">BY</option>
+        <option value="en-GB">EN</option>
+        <option value="es-ES">ES</option>
+    </select>
+</label>
+
+      </div>
+
+      <nav class="header-top__navigation">
+        <ul class="header-top__navigation-list">
+          <li class="header-top__navigation-list-item"><a class="header-top__navigation-link" href="#">Добавить
+              сертификат</a></li>
+          <li class="header-top__navigation-list-item"><a class="header-top__navigation-link" href="#">Интернет
+              площадкам</a></li>
+          <li class="header-top__navigation-list-item"><a class="header-top__navigation-link"
+               href="#">Дистрибьютерам</a>
+          </li>
+          <li class="header-top__navigation-list-item"><a class="header-top__navigation-link" href="#">Бизнес
+              площадкам</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+
+  <div class="header-bottom">
+
+    <div class="header-bottom__menu">
+
+      <div class="header-bottom__logo">
+        <a href="__pagelist.html" class="header-bottom__logo-link">
+          <img class="header-bottom__logo-image" src="img/common.blocks/stack/sprite.svg#header--biggid-white-logo"
+               alt="Biggid logo">
+        </a>
+      </div>
+
+      <nav class="header-bottom__navigation">
+        <ul class="header-bottom__navigation-list">
+          <li class="header-bottom__navigation-list-item"><a class="header-bottom__navigation-link"
+               href="/catalog-certs.html">Сертификаты</a></li>
+          <li class="header-bottom__navigation-list-item"><a class="header-bottom__navigation-link"
+               href="/catalog-coupons.html">Купоны</a>
+          </li>
+          <li class="header-bottom__navigation-list-item"><a class="header-bottom__navigation-link"
+               href="/catalog-impressions.html">Впечатления</a></li>
+          <!-- <li class="header-bottom__navigation-list-item"><a class="header-bottom__navigation-link" href="#">События</a></li> -->
+          <li class="header-bottom__navigation-list-item"><a class="header-bottom__navigation-link"
+               href="/catalog-promo.html">Акции и
+              скидки</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-bottom__actions">
+        <ul class="header-bottom__actions-list">
+
+          <!-- <li class="header-bottom__actions-item header-item-search"><a class="header-bottom__actions-link"
+                            href="#"><span class="header-bottom__icon-search" title="Поиск"></span><span
+                                class="header-bottom__actions-link-title">Поиск</span></a></li> -->
+
+          <li class="header-bottom__actions-list-item">
+            <a class="header-bottom__actions-link" href="#">
+              <span class="header-bottom__icon-bonus" data-badge-text="125 Р"
+                    title="Бонусы. На счету 125 бонусных рублей"></span><span
+                    class="header-bottom__actions-link-title">Бонусы</span>
+            </a>
+          </li>
+
+          <li class="header-bottom__actions-list-item">
+            <a class="header-bottom__actions-link" href="#">
+              <span class="header-bottom__icon-profile" data-badge-text="" title="Профиль"></span><span
+                    class="header-bottom__actions-link-title">Профиль</span>
+            </a>
+          </li>
+
+          <li class="header-bottom__actions-list-item">
+            <a class="header-bottom__actions-link" href="#">
+              <span class="header-bottom__icon-cart" data-badge-text="47"
+                    title="Корзина. В корзине 47 товаров"></span><span
+                    class="header-bottom__actions-link-title">Корзина</span>
+            </a>
+          </li>
+
+          <li class="header-bottom__actions-list-item header-bottom__actions-list-item--menu-button">
+            <a class="header-bottom__actions-link" href="#main-menu" data-overlayid="main-menu">
+              <span class="header-bottom__icon-menu" title="Меню"></span><span
+                    class="header-bottom__actions-link-title">Меню</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- Инициализация .header -->
+<script>
+  // - Кнопка назад (mobile)
+  // - Кнопка поделиться (mobile)
+  // - Бегущая строка с Title (mobile)
+  document.addEventListener('DOMContentLoaded', () => new Header());
+</script>
+
+
+<!-- Разщмещать оверлеи снаружи header
+(из-за анимации скрывающейся панели хедера при скролле) -->
+<!-- .overlay -->
+
+<div id="main-menu" class="overlay" tabindex="-1">
+
+    <button class="overlay__close-button">
+        <svg viewbox="0 0 40 40">
+            <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+    </button>
+
+    <div class="overlay__body">
+
+        <!-- .main-menu -->
+
+<div class="main-menu">
+
+    <ul class="main-menu__list">
+
+        <li class="main-menu__list-item">
+            <label class="label label--wrap">
+    <span>Валюта:</span>
+    <select class="select " name="currency" id="currency">
+        <option value="BYN">BYN</option>
+        <option value="RUB">RUB</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+</label>
+        </li>
+
+        <li class="main-menu__list-item">
+            <label class="label label--wrap">
+    <span>Язык:</span>
+    <select class="select " name="language" id="language">
+        <option value="ru-RU">RU</option>
+        <option value="be-BY">BY</option>
+        <option value="en-GB">EN</option>
+        <option value="es-ES">ES</option>
+    </select>
+</label>
+        </li>
+
+    </ul>
+
+    <ul class="main-menu__list">
+        <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--uppercase" href="/catalog-certs.html">Подарочные сертификаты</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--uppercase" href="/catalog-coupons.html">Скидочные купоны</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--uppercase" href="/catalog-impressions.html">Впечатления</a>
+        </li>
+        <!-- <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--uppercase" href="#">События</a>
+        </li> -->
+        <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--uppercase" href="/catalog-promo.html">Акции и скидки</a>
+        </li>
+    </ul>
+
+    <ul class="main-menu__list">
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="#">Добавить сертификат</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="#">Интернет-площадкам</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="#">Дистрибьютерам</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="#">Бизнес-площадкам</a>
+        </li>
+    </ul>
+
+</div>
+
+<!-- // .main-menu -->
+
+
+    </div>
+
+</div>
+
+<!-- // .overlay -->
+<!-- .overlay -->
+
+<div id="share_page" class="overlay" tabindex="-1">
+
+    <button class="overlay__close-button">
+        <svg viewbox="0 0 40 40">
+            <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+    </button>
+
+    <div class="overlay__body">
+        <h2>Overlay menu</h2>
+        <p>Just template of regular overlay!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+            sed aperiam ex saepe sint,
+            velit optio deserunt ullam ipsam quod eveniet placeat, tempore incidunt deleniti laborum sit illum maiores
+            obcaecati, ut earum dignissimos facere eum. At dolore sequi et ipsam officia quod nihil voluptas!</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium cumque velit libero,
+            nesciunt mollitia molestiae distinctio id? Deserunt, quo. Cum in excepturi unde reprehenderit, cumque optio
+            distinctio libero pariatur labore architecto aliquam temporibus ab quam, numquam incidunt aspernatur. Ad,
+            minus?</p>
+    </div>
+
+</div>
+
+<!-- // .overlay -->
+
+<!-- // .header -->
+
+    <main class="main"
+          style="display: flex; justify-content: center; align-items: center; text-align: center;">
+
+        <div class="p1 m1" style="box-shadow: var(--shadow-grey-10); border-radius: 5px;">
+
+            <h1>404 — Page Not Found</h1>
+            <p>Sorry, but the page you were trying to view does not exist.</p>
+            <p>Use search form to find something that interests you.</p>
+
+            <hr>
+
+            <h1>404 — Страница не найдена</h1>
+            <p>Страница, которую вы пытаетесь найти, не существует либо перемещена по новому адресу.</p>
+            <p>Чтобы найти интересующую Вас информацию – воспользуйтесь формой поиска.</p>
+
+        </div>
+
+    </main>
+
+    <footer class="footer footer--center">
+
+    <div class="footer__content-wrap">
+        <nav class="footer__navigation">
+            <ul class="footer__navigation-list">
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Публичная оферта</a>
+                </li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Личный кабинет</a></li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">О компании</a></li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Отзывы</a></li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Добавить сертификат</a>
+                </li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Интернет площадкам</a>
+                </li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Дистрибьютерам</a></li>
+                <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Бизнес площадкам</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer__infoblock">
+            <span class="footer__infoblock-title">Способы оплаты</span>
+            <br>
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/1.png" alt="visa">
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/2.png" alt="mastercard">
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/3.png" alt="maestro">
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/5.png" alt="mir">
+            <br>
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/12.png" alt="neteller">
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/11.png" alt="webmoney">
+            <img class="footer__payment-icon" src="./img/test-images/payment-footer-icons/22.png" alt="western union">
+        </div>
+
+        <div class="footer__copy">
+            <span>© 2016-2018 ООО&nbsp;«Дару&nbsp;Тек» УНП&nbsp;192631946</span>
+        </div>
+    </div>
+
+</footer>
+    <!---------------- JS ---------------->
+<script src="js/main.min.js"></script>
+<script src="js/common.blocks.min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<!-- <script>
+
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+
+</script>  -->
+
+<!-- <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+
+
+</body>
+
+</html>
