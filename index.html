@@ -2,131 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/pipes.css">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="preload">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet"> -->
-
-  <link rel="preload" href="css/style.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <title>Frants Mitskun — Portfolio webpage</title>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
 </head>
 
 <body>
-  <header class="header">
-    <ul class="header__list">
-      <li class="header__item">
-        <a class="header__link" href="#intro">Intro</a>
-      </li>
-      <li class="header__item">
-        <a class="header__link" href="#about">About</a>
-      </li>
-      <li class="header__item">
-        <a class="header__link" href="#portfolio">My works</a>
-      </li>
-      <li class="header__item">
-        <a class="header__link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </header class="header">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="canvas-container" id="canvas-container"></div>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-  <main class="main">
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-    <section id="intro" class="screen screen--intro">
-      <h1>
-        <span class="neon neon--on">
-          <span class="letter-h">H</span><span class="letter-e">e</span><span class="letter-l1">l</span><span
-                class="letter-l2">l</span><span class="letter-o neon--disabled">o<div class="spark"></div>
-            <div class="spark2"></div>
-          </span></span>
-      </h1>
-    </section>
-
-    <section id="about" class="screen">
-
-      <div class="text-block">
-        <p> Hello, I'm Frants. I graduated from Minsk Innovation University with a bachelor deegree in Information
-          Systems
-          and Technologies (in economics). So, my qualification is a programming engineer, economist. Also,
-          successfully
-          commpleted QA course «Software Testing Basics» (2015) and JS course «JavaScript Advanced Level» (2018). I have
-          5 years of working experience in web sphere. I have
-          been working in DAROO.by for 3 years as a front-end developer. I like minimalist Website Design, and to create
-          responsive and accessible UI and components. Currently working with / learning JavaScript frameworks, bundler
-          tools and Node. In my
-          free time like to cycling, play table tennis, poker, also love music, both to listen and
-          create (can play guitar a little, sometimes launch FL Studio).
-        </p>
-      </div>
-
-    </section>
-
-    <section id="portfolio" class="screen">
-
-      <ul>
-        <li>
-          <p><a href=//dmn-checker.herokuapp.com target="_blank">Domain Checker</a> (2020) — Pet-project for
-            friend<br><code>Node, Express, Vue, Bootstrap</code></p>
-        </li>
-
-        <li>
-          <p><a target="_blank">Widget</a> (2019 - 2020)<br>
-            <code>Vue, Vuex, Vue Router, SCSS</code></p>
-        </li>
-
-        <li>
-          <p><a href="/projects/dist/__pagelist.html" target="_blank">Catalog</a> (2019 - 2020)<br><code>Gulp, SCSS, Vanilla JS, Vue.js</code></p>
-        </li>
-
-
-        <li>
-          <p><a target="_blank">Admin Panel</a> (2019 - 2020)<br><code>Grunt, SCSS, JQuery, Vue.js, Bootstrap</code>
-          </p>
-        </li>
-
-        <li>
-          <p><a href="/projects/AMP-pages-DAROO/index.html" target="_blank">AMP pages for Daroo.by</a>
-            (2019)<br><code>Schema, Google AMP</code></p>
-        </li>
-
-        <li>
-          <p><a href=//t.me/froghelper_bot target="_blank">Telegram Bot - Helper Frog</a> (2019) — Personal
-            Telegram Bot<br><code>Node, node-telegram-bot-api, "cron", puppeteer, Google Firebase</code></p>
-        </li>
-
-        <li>
-          <p><a href=//daroo.by/minsk/catalog target="_blank">Daroo.by</a> (2018 - 2019) — (main menu + main page + catalog
-            page)<br><code>JQuery</code>
-          </p>
-        </li>
-
-        <li>
-          <p><a href=//frantsmn.herokuapp.com/ target="_blank">Tetris.js</a> (2018) — Final project at «JavaScript
-            Advanced Level» course<br><code>Vanilla JS, JQuery, Swiper</code></p>
-        </li>
-
-
-      </ul>
-
-    </section>
-
-    <section id="contact" class="screen">
-      <ul>
-        <li>
-          <p><a href="//www.linkedin.com/in/frantsm" target="_blank">LinkedIn</a></p>
-        </li>
-        <li>
-          <p><a href="mailto:hquirky@gmail.com" target="_blank">E-mail</a></p>
-        </li>
-        <li>
-          <p><a href="//t.me/frantsm" target="_blank">Telegram</a></p>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
 </body>
+
+<script src="%PUBLIC_URL%/js/pipes.js"></script>
 
 </html>
